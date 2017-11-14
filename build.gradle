@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// 定义全局版本号
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.2"
+    minSdkVersion = 16
+    targetSdkVersion = 26
+
+    //lib版本
+    gframe_minSdkVersion = 16
+    gframe_targetSdkVersion = 26
+    gframe_compileSdkVersion = 26
+    gframe_buildToolsVersion = "26.0.2"
+    gframe_versionCode = 1
+    gframe_versionName = "1.0.0"
+    gframe_v7 = 'com.android.support:appcompat-v7:26.1.0'
+}
